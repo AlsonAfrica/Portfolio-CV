@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhlakanipho Radebe Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="intro-container">
+        <div class="navbar">
+          <div class="logo">
+            <span>A</span>
+            <span>l</span>
+            <span>s</span>
+            <span>o</span>
+            <span>n</span>
+          </div>
+          <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <div class="nav-items">
+            <a href="#home" class="nav-item">Home</a>
+            <a href="#projects" class="nav-item">Projects</a>
+            <a href="#skills" class="nav-item" id="log">Skills</a>
+            <a href="#contacts" class="nav-item" id="log">Contacts</a>
+            <a
+              href="https://alsonafrica.github.io/Digital-CV/"
+              class="nav-item"
+              id="log"
+              >Resume</a
+            >
+            <button class="nav-item" id="open-modal">Location</button>
+          </div>
+        </div>
+        <div class="about" id="home">
+          <h1 class="greeting">Hi, this is Alson</h1>
+          <h2 class="title">I am a React Developer</h2>
+          <p class="about-text">
+            With over 5 years of experience building modern web applications, I
+            specialize in creating responsive, user-friendly interfaces using
+            React.js and related technologies. My passion lies in crafting
+            clean, efficient code that delivers exceptional user experiences. I
+            enjoy solving complex problems and continuously learning new
+            technologies to stay at the forefront of web development.
+          </p>
+        </div>
+        <div id="modal-overlay">
+          <div id="modal">
+            <div class="close-button-container">
+              <button id="close-modal">x</button>
+            </div>
+            <div>
+              <button onclick="getLocation()">location</button>
+              <p id="errorMessage"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="photo-container">
+        <image
+          class="personal-image"
+          src="./assets/myself.jpg"
+          alt="Profile Picture"
+        />
+      </div>
+    </div>
+
+    <!-- Projects Container -->
+    <div class="Projects" id="projects">
+      <div class="projects-container">
+        <h1 class="projects-heading">Projects</h1>
+
+        <div class="carousel">
+          <div class="carousel-container">
+            <div id="project1" class="project-card prev">
+              <div class="project-icon" style="background-color: #e84c88">
+                <span>&#128187;</span>
+              </div>
+              <h2>Shopping List Application</h2>
+              <p>
+                React-based shopping list application that uses Redux for state
+                management
+              </p>
+              <button class="project-button">Demo</button>
+            </div>
+
+            <div id="project2" class="project-card active">
+              <div class="project-icon" style="background-color: #e84c88">
+                <span>&#128187;</span>
+              </div>
+              <h2>Exsquisite Website</h2>
+              <p>Florist Website</p>
+              <button class="project-button">Demo</button>
+            </div>
+
+            <div id="project2" class="project-card active">
+              <div class="project-icon" style="background-color: #e84c88">
+                <span>&#128241;</span>
+              </div>
+              <h2>Audio Recording App</h2>
+              <p>
+                Audio Recording App is a digital journal designed for voice
+                recording
+              </p>
+              <button class="project-button">Demo</button>
+            </div>
+
+            <div id="project3" class="project-card next">
+              <div class="project-icon" style="background-color: #6a49eb">
+                <span>&#127976;</span>
+              </div>
+              <h2>Hotel App</h2>
+              <p>
+                A modern, feature-rich hotel management and booking application
+                built with React
+              </p>
+              <button class="project-button">
+                <a href="https://hotel-react-7rdu.onrender.com/">Demo</a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="control-btn prev-btn">&lt;</button>
+          <button class="control-btn next-btn">&gt;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Container -->
+    <div class="skills-wrapper" id="skills">
+      <div class="image-container">
+        <img src="./assets/tools.jpg" alt="Profile image" />
+      </div>
+      <div class="skills-container">
+        <h2 class="skills-heading">Skills</h2>
+        <div class="skills-pills">
+          <span class="skill-pill">HTML</span>
+          <span class="skill-pill">CSS</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">React</span>
+          <span class="skill-pill">React-Native</span>
+          <span class="skill-pill">Node.js</span>
+          <span class="skill-pill">Firebase</span>
+          <span class="skill-pill">Mongo-DB</span>
+          <span class="skill-pill">SQL-Lite</span>
+          <span class="skill-pill">UI/UX Design</span>
+          <span class="skill-pill">Responsive Design</span>
+          <span class="skill-pill">Git</span>
+          <span class="skill-pill">Agile</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="form-container" id="contacts">
+      <div class="form animate__animated animate__fadeIn">
+        <h2 class="animate__animated animate__fadeInDown">Contact Me</h2>
+        <p class="animate__animated animate__fadeIn animate__delay-1s">
+          Here's how to reach me, looking forward to talk with you all!
+        </p>
+        <ul class="animate__animated animate__fadeIn animate__delay-1s">
+          <li>
+            Inquiries via email at
+            <a href="mailto:sevbofx@gmail.com" class="email-highlight"
+              >nhlakaniphoradebe337@gmail.com</a
+            >
+            or via socials below:
+          </li>
+        </ul>
+        <div
+          class="social-icons animate__animated animate__fadeInUp animate__delay-1s"
+        >
+          <a
+            href="https://github.com/sevbo2003"
+            target="_blank"
+            class="social-icon github"
+            title="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/abdusamad-malikov"
+            target="_blank"
+            class="social-icon linkedin"
+            title="LinkedIn"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://t.me/sevbo_official"
+            target="_blank"
+            class="social-icon telegram"
+            title="Telegram"
+          >
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/real.abdusamad/"
+            target="_blank"
+            class="social-icon facebook"
+            title="Facebook"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+        <a
+          href="#"
+          class="resume-link animate__animated animate__fadeInUp animate__delay-2s"
+        >
+          View my resume in PDF format
+        </a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-content">
+              <nav class="footer-nav">
+                  <ul>
+                      <li><a href="#home">Home</a></li>
+                      <li><a href="#projects">Projects</a></li>
+                      <li><a href="#skills">Skills</a></li>
+                      <li><a href="#contacts">Contacts</a></li>
+                      <li><a href="#resume">Resume</a></li>
+                  </ul>
+              </nav>
+              
+              <a href="https://maps.google.com" target="_blank" class="location-btn">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Location
+              </a>
+              
+              <div class="copyright">
+                  &copy; 2025 Nhlakanipho Radebe. All rights reserved.
+              </div>
+          </div>
+      </div>
+  </footer>
+
+    <!-- Your content here -->
+    <script src="script.js"></script>
+  </body>
+</html>
